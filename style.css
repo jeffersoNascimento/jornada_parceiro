@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --green1: rgb(95, 125, 34);
+    --green: rgb(0, 45, 32);
+    --bege: rgb(248, 227, 181);
+}
+
+body {
+    background-color: var(--bege);
+    min-height: 100vh; /* Garante que o corpo da página ocupe toda a altura da tela */
+}
+
+h1 {
+    padding: 20px;
+    color: var(--green1);
+}
+
+p {
+    color: var(--green);
+    margin-left: 40px;
+    padding: 10px;
+    font-size: large;
+}
+
+h2 {
+    padding: 20px;
+    color: var(--green1);
+}
+
+.img {
+    margin-left: 100px;
+    width: 800px;
+    height: 500px;
+    box-shadow: 2px 2px 2px rgb(95, 125, 34);
+    border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.header {
+    background-color: var(--green);
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.header img {
+    position: center;
+    background-color: var(--bege);
+    border-radius: 4px;
+    padding: 10px;
+    max-width: 300px; /* Define a largura da imagem para preencher o cabeçalho */
+    height: auto; /* Mantém a proporção original da imagem */
+    box-shadow: 1px 2px 1px  rgb(95, 125, 34);
+}
+
+.linhas {
+    padding: 10px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.linha1, .linha2, .linha3, .linha4, .linha5, .linha6 {
+    margin-top: 10px;
+    margin-left: 10px;
+    max-width: 350px;
+    background: var(--green);
+    color: var(--bege);
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px; 
+    padding: 10px; 
+    box-shadow: 1px 2px 1px rgb(95, 125, 34);
+}
+
+/* Adicione um estilo para ocultar o vídeo por padrão */
+#videoPlayer {
+    background-color: var(--green1);
+    display: none;
+    width: 660px;
+    height: 370px;
+    margin-top: 300px;
+    margin-left: 250px;
+    border-radius: 4px;
+    box-shadow: 1px 2px 1px rgb(95, 125, 34);
+}
+
+/* Estilo para mostrar o vídeo quando uma opção for selecionada */
+#select1:focus + #videoPlayer {
+    display: flex;
+}
+
+/* Estilo para o seletor select */
+#select1, #select2, #select3, #select4, #select5, #select6{
+    color: var(--green);
+    margin-bottom: 5px; /* Adicione espaço inferior para separar do vídeo */
+}
+
+/* Estilo para o wrapper do seletor */
+.select-wrapper {
+    margin-right: 20px;
+}
+
+/* Estilo para o wrapper do vídeo */
+.video-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.video-wrapper {
+    position: absolute; /* Define a posição absoluta */
+    top: 0; /* Alinha o topo do vídeo com o topo da div pai */
+    left: 50%; /* Move o vídeo para a direita em relação à div pai */
+    transform: translateX(-50%); /* Centraliza horizontalmente o vídeo */
+    width: 45%; /* Define a largura da div que contém o <video> */
+}
+
