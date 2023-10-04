@@ -123,3 +123,14 @@ h2 {
     width: 45%; /* Define a largura da div que contém o <video> */
 }
 
+
+@media screen and (max-width: 768px) {
+    /* Estilos para telas menores (celulares) */
+    .video-wrapper {
+        flex-direction: column;
+    }
+
+    #videoPlayer {
+        margin-top: 20px;
+    }
+}
