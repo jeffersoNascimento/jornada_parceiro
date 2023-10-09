@@ -11,7 +11,7 @@
 :root {
     --green1: rgb(95, 125, 34);
     --green: rgb(0, 45, 32);
-    --bege: rgb(248, 227, 181);
+    --bege: #fff;
 }
 
 body {
