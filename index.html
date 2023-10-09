@@ -3,101 +3,486 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Jornada do Parceiro</title>
+    <title>TC Componentes</title>
+    <style>
+
+        :root {
+            --green1: rgb(95, 125, 34);
+            --green: rgb(0, 45, 32);
+            --bege: #fff;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bege);
+        }
+        
+        header {
+            background-color: var(--green);
+            color: var(--bege);
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--bege);
+            border-radius: 8px;
+            box-shadow: 0px 0px 0px 0px 1px rgba(0, 45, 32);
+        }
+
+        h2, h3 {
+            margin-top: 40px;
+            color: var(--green1);
+        }
+        
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: var(--bege);
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 45, 32);
+        }
+        
+        .course-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .course-info img {
+            max-width: 70%;
+            height: auto;
+        }
+        
+        .course-description {
+            flex: 1;
+            margin: 20px;
+        }
+        
+        .course-description p {
+            color: var(--green);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .red {
+            color: red;
+        }
+
+        .img {
+            margin-left: 10px;
+            width: 300px;
+            height: 200px;
+            box-shadow: 0px 0px 0px 1px rgb(0, 45, 32);
+            border-radius: 5px;
+        }
+
+        .logo {
+            margin-left: 10px;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .link {
+            color: var(--green);
+            text-decoration: none;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .course-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .course-description {
+                margin: 10px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="header">
-      <img src="TC COMPONENTES.png" alt="logo">
-    </div>
-  <div class="linhas">
-      <div>
-        <div class="linha1">
-        <label for="">Estruturação - Vídeo Aulas</label>
-         <div>
-          <select id="select1">
-            <option value="" disabled selected>Selecione a aula</option>
-            <option value="videos/Criar Paredes.mp4">Aula 01 - Criar Paredes</option>
-            <option value="videos/Editar Paredes.mp4">Aula 02 - Editar Paredes</option>
-            <option value="videos/Pontos Eletrico Hidraulico.mp4">Aula 03 - Aberturas e Pontos Elétricos e Hidráulicos</option>
-            <option value="videos/Formas Geometricas.mp4">Aula 04 - Criar Formas Geométricas</option>
-            <option value="videos/Buraco na Geometria.mp4">Aula 05 - Construir uma Geometria</option>
-            <option value="videos/Perfil na Geometria.mp4">Aula 06 - Aplicar Perfil a Geometria</option>
-            <option value="videos/Buraco na Geometria.mp4">Aula 07 - Criar um Buraco na Geometria</option>
-            <option value="videos/Salvar Geometria.mp4">Aula 08 - Salvar uma geometria</option>
-          </select>
-        </div>
+    <header>
+        <h1>Jornada do Parceiro</h1>
+    </header>
+    <div class="container">
+        <div class="course-info">
+            <img src="TC COMPONENTES.png" alt="Imagem do Curso" class="logo">
         </div>
 
-        <div class="video-wrapper">
-          <video id="videoPlayer" controls>
-              <source id="videoSource" src="" type="video/mp4">
-          </video>
-        </div>
+        
+            <div class="course-description">
+                
+                <h2>Visão Geral</h2>
+                <p>
+                    <strong> 
+                        Nesta fase da Visão Geral, apresentaremos a tela principal do usuário. 
+                        É a partir dela que você terá acesso à todas as funcionalidades do sistema. 
+                        Também será apresentada a importância do mouse em um programa 3D, neste caso, 
+                        exclusivamente para você parceiro.
+                    </strong>
+                </p>
+                <img src="imagens/img1.jpg" alt="" class="img">
+                <div><br></div>
+                <img src="imagens/img2.jpg" alt="" class="img">
+                <p style="color: red;">(1) Menus do Sistema (2) Barra Superior (3) Barra de Propriedades (4) Barra Inferior (5) Catálogos (6) Paredes</p>
+                <br>
+                <h2>Mouse - Sua Extensão</h2>
+                <p>
+                   <strong>
+                       Depois do teclado, o mouse é o dispositivo mais usado para a execução das mais variadas tarefas em um computador. 
+                       Em sua essência, o mouse nada mais é do que um dispositivo que controla um cursor (ou ponteiro) na tela da máquina, servindo 
+                       como uma espécie de extensão das mãos de uma pessoa e, mais precisamente, como meio de comunicação entre o projetista e o computador.
+                   </strong> 
+                </p>
+                <img src="imagens/img3.jpg" alt="" class="img">
 
-        <div class="linha2">
-          <label for="">Contextualização - Vídeo Aulas</label>
-           <div>
-            <select id="select2">
-              <option value="" disabled selected>Selecione a aula</option>
-              <option value="videos/Inserir Objetos.mp4">Aula 09 - Inserir Objetos Decorativos</option>
-              <option value="videos/Aplicar Texturas.mp4">Aula 10 - Aplicar Texturas</option>
-            </select>
-          </div>
-          </div>
+                <p><strong>É claro que é possível utilizar um computador sem mouse, mas esse dispositivo é tão prático e tão comum, que a maioria esmagadora das aplicações gráficas são desenvolvidas considerando o seu uso. Assim sendo, que tal entender um pouco do funcionamento e de como ele facilita o uso de nosso sistema.</strong></p>
+                <br>
+                <h2>ESTRUTURAÇÃO</h2>
+                <br>
+                <p><strong>Os projetos 3D agregaram realismo às representações, agilidade nas definições e, caso necessário, alterações imediatas no projeto. Logo, o 3D permite ao profissional visualizar o que criou e editar rapidamente o que for preciso.</strong></p>
+                
+                <img src="imagens/img4.png" alt="" class="img">
+                <br><br>
+                <h3>Criar Paredes</h3>
+                <p>
+                   <strong>
+                    Desenhar as paredes é o processo preliminar de qualquer ambientação, 
+                    é nele que delineamos o espaço a ser trabalhado.</strong> 
+                </p>
+                <img src="imagens/img5.jpg" alt="" class="img">
+                <button><a href="https://vimeo.com/473653375" target="_blank" class="link">Assistir</a></button>
+                
+                <div>
+                    <p style="color: rgb(0, 45, 32);">Acesso a todas as vídeo aulas</p>
+                    <button><a href="videos.html" target="_blank" class="link">Vídeo Aulas</a></button>
+                </div>
+                <br>
+                <h2>Editar Paredes</h2>
+                <p>
+                   <strong>
+                    Caso seja necessário alterar as medidas, incluir ou remover, após assistir esse vídeo você será capaz de fazer essas alterações quando necessário.
+                   </strong> 
+                </p>
+                <img src="imagens/img6.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473657917" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>Aberturas e Pontos Elétricos e Hidráulicos</h2>
+                <p>
+                   <strong>
+                    Nesta aula vamos apresentar como se dará a inserção de portas, janelas, pontos elétricos e hidráulicos, bem como posicioná-los adequadamente nas respectivas paredes.
+                   </strong> 
+                </p>
+                <img src="imagens/img7.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473660185" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>Criar Formas Geométricas</h2>
+                <p>
+                   <strong>
+                    É hora de explorarmos as Formas Geométricas, sejam em posições frontais, laterais ou horizontais. Portanto, sugerimos um esforço adequado no domínio dessa funcionalidade, uma vez que permite inúmeras possibilidades na criação de tampos de bancadas, sacas de gesso, vigas, colunas, sóculos e rodapés, entre outros. 
+                   </strong> 
+                </p>
+                <img src="imagens/criar formas geometricas.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473661552" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>CONTEXTUALIZAÇÃO</h2>
+                <h3>Inserir Objetos Decorativos</h3>
+                <p>
+                   <strong>
+                    A próxima aula também requer uma dedicação extra, uma vez que os objetos decorativos valorizam os projetos, contextualizando os ambientes. Assim se faz necessário habilidade no trato das funcionalidades relacionadas, tais como: inserir, editar, mover, inclinar, rotacionar, agregar, entre tantas outras possibilidades.
+                   </strong> 
+                </p>
+                <img src="imagens/img8.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473664698" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>Aplicar Texturas</h2>
+                <p>
+                   <strong>
+                    Agora vamos cuidar da aplicação de texturas e revestimentos, inclusive esclarecer como o sistema os difere.
+                   </strong> 
+                </p>
+                <img src="imagens/img9.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473663760" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>APRESENTAÇÃO</h2>
+                <h3>Salvar Vistas e Renderizar</h3>
+                <p>
+                   <strong>
+                    Quando concluímos o projeto é hora de apresentar o trabalho. As funcionalidades de salvar vistas e renderizar são importantíssimas neste quesito, elas propiciam realismo às imagens.
+                   </strong> 
+                </p>
+                <img src="imagens/img10.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473665841" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>Imprimir</h2>
+                <p>
+                   <strong>
+                    Uma vez geradas as imagens, seja no formato vistas ou renderizado, se faz necessário adicionar informações complementares, ora para atender o cliente externo (demandante do projeto) ora para os clientes internos (montadores e equipe técnica de produtos); tanto para gerar as expectativas corretas, como para executar a entrega como previsto. Essas funcionalidades encontramos na impressão, seja em papel propriamente dito ou através do formato em pdf. Nessa aula vamos lhe mostrar como fazer.
+                   </strong> 
+                </p>
+                <img src="imagens/img11.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/480392107" target="_blank" class="link">Assistir</a></button>
+
+                <br><br>
+                <h2>SINGULARIDADE DO SISTEMA</h2>
+                <h3>Combinatividade</h3>
+                <p>
+                   <strong>
+                    A linhas de produtos desenvolvidas possuem uma característica singular, fornecemos as estruturas das caixarias vazias e sem rótulos de ambientes, que por sua vez podem receber os respectivos agregados, ou seja, os acessórios, aramados, outras caixarias, as frentes, os internos e automatizações (rodopias, tampos, tamponamentos, rodapés e rodatetos). 
+                    Facilitando inúmeras combinações que podem ser salvas posteriormente em favoritos, aí sim, caso queiram, poderão organizá-los por ambientes como: área de serviços, banho, cozinha, home office, quarto e sala. Armários
+                   </strong> 
+                </p>
+
+                <p>
+                   <strong>
+                    1. Armários
+                    Módulos compostos por estruturas conhecidas como torres, dispensários, colunas ou roupeiros; essa descrição depende muito do ambiente em que estiver inserido, disponíveis nas opções com e sem rodapés. 
+                   </strong>
+                </p>
+                <img src="imagens/img12.jpg" alt="" class="img">
+
+                <p>
+                    <strong>
+                        2. Inferiores
+                        Módulos compostos por estruturas conhecidas como balcões, bancadas e sob pia; podendo conter ou não rodapés ou ficarem até mesmo suspensos (fixados na parede).
+                    </strong>
+                </p>
+                <img src="imagens/img13.jpg" alt="" class="img">
+
+                <p>
+                    <strong>
+                        3. Superiores
+                        Módulos compostos por estruturas conhecidas como de parede e maleiros, sendo muito versáteis e participando de várias soluções. 
+                    </strong>
+                </p>
+                <img src="imagens/img14.jpg" alt="" class="img">
+
+                <p>
+                    <strong>
+                        4. Agregados
+                        Uma ampla gama de possibilidades que podem ser combinados com as estruturas já vistas ou mesmo entre si, com as alternativas disponíveis você poderá criar diversas soluções organizadoras, adicionando ou removendo as opções que desejar.
+                    </strong>
+                </p>
+                <img src="imagens/img15.jpg" alt="" class="img">
+
+                <p><strong>“O resultado será um módulo adequado às necessidades de seu cliente.”</strong></p>
+
+                <br><br>
+                <h2>Exemplo Prático</h2>
+                <p>
+                   <strong>
+                    Neste vídeo vamos mostrar a criação de um armário deslizante, observaremos as facilidades que o projetista terá para desenvolver seus trabalhos.                   </strong> 
+                </p>
+                <img src="imagens/img16.jpg" alt="" class="img">
+
+                <button><a href="https://player.vimeo.com/video/685018845?h=a99af1d3bc&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" target="_blank" class="link">Assistir</a></button>
+                
+                <br><br>
+                 <h2>USABILIDADE DAS MODULAÇÕES</h2>
+                 <h3>Inserção dos Módulos</h3>
+                 <p>
+                    <strong>
+                        Nessa aula vamos apresentar os modelos que você tem para fazer a inclusão.
+                    </strong> 
+                 </p>
+                 <img src="imagens/img17.jpg" alt="" class="img">
+ 
+                 <button><a href="https://vimeo.com/837171627" target="_blank" class="link">Assistir</a></button>
+ 
+                 <br><br>
+                 <h2>Edição de Medidas</h2>
+                 <p>
+                    <strong>
+                        Nessa aula vamos tratar da edição de medidas dos módulos.
+                    </strong> 
+                 </p>
+                 <img src="imagens/img18.jpg" alt="" class="img">
+ 
+                 <button><a href="https://vimeo.com/837172559" target="_blank" class="link">Assistir</a></button>
+
+                 <br><br>
+                 <h2>Mover livre</h2>
+                 <p>
+                    <strong>
+                        Ao clicar e arrastar sobre um objeto ele será movimentado livremente no plano da parede ou do piso.
+                    </strong> 
+                 </p>
+                 <img src="imagens/img19.jpg" alt="" class="img">
+ 
+                 <button><a href="https://www.youtube.com/watch?v=bBwju-sgCj4" target="_blank" class="link">Assistir</a></button>
+
+                 <br><br>
+                <h2>Movimentar livre na parede</h2>
+                <ul>
+                    <li>Se o objeto estiver encostado na parede ele será movimentado no plano da parede.</li>
+                    <li>Se existir outros objetos nessa parede, o objeto movimentado sofrerá uma pequena resistência na sua movimentação sempre que ficar alinhado na base ou no topo do objeto ao lado.</li>
+                </ul>
+
+                <img src="imagens/img20.jpg" alt="" class="img">
+
+                <br><br>
+                <h2>Mover com o botão direito do mouse</h2>
+                <p><strong>Arrastar objeto para outra parede ou piso</strong></p>
+                <ul>
+                    <li>Segure o botão direito do mouse sobre o objeto e arraste para a parede desejada.</li>
+                    <li>Solte o objeto sobre o piso caso deseje que ele desencoste da parede.</li>
+                </ul>
+
+                <img src="imagens/img21.jpg" alt="" class="img">
+
+                <br><br>
+                <h2>Arrastar objeto sobre outro</h2>
+                 <p>
+                    <strong>
+                        1.	Segure o botão direito do mouse sobre o objeto e arraste sobre o outro objeto.
+                    </strong> 
+                 </p>
+                 <img src="imagens/arrastar objeto 1.jpg" alt="" class="img">
+
+                 <p>
+                    <strong>
+                        2.	A tela de reposicionamento será exibida.
+                    </strong> 
+                 </p>
+                 <img src="imagens/arrastar objetos 2.jpg" alt="" class="img">
+
+                 <br><br>
+                 <h2>Redimensionar Objetos</h2>
+                 <p>
+                    <strong>
+                        Clique e arraste o manipulador cubo no sentido desejado para redimensionar o objeto.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img24.jpg" alt="" class="img">
+
+                 <p>
+                    <strong>
+                        Dê duplo-clique no cubo para que o objeto redimensione até preencher todo o vão.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img25.jpg" alt="" class="img">
+
+                 <h2>Compartilhamento das Laterais</h2>
+                 <p>
+                    <strong>
+                        Para compartilhar as laterais, a linha de produtos precisa ter a funcionalidade habilitada.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img26.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/837213739" target="_blank" class="link">Assistir</a></button>
+
+                <h2>Estruturação dos Módulos</h2>
+                 <p>
+                    <strong>
+                        Nessa aula vamos apresentar como podemos estruturar um módulo.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img27.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/837217697" target="_blank" class="link">Assistir</a></button>
+
+                <h2>Inserção de Gavetas e Sapateiras Internas</h2>
+                 <p>
+                    <strong>
+                        Nessa aula vamos apresentar a inserção das gavetas e sapateiras interna de forma simples e didática.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/Inserção de gavetas e sapateiras.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/837218628" target="_blank" class="link">Assistir</a></button>
+
+                <h2>Avanços das Frentes</h2>
+                 <p>
+                    <strong>
+                        Vamos apresentar como você parceiro pode controlar o avanço das frentes.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img28.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/837221272" target="_blank" class="link">Assistir</a></button>
+
+                <h2>Movimentação Interna</h2>
+                 <p>
+                    <strong>
+                        Inserindo no módulo uma lateral interna e uma base intermediaria, selecione o componente pressione o controle e dê dois clicks.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img29.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/837223031" target="_blank" class="link">Assistir</a></button>
+
+                <h2>Combos de Identidades / Automatizações</h2>
+                 <p>
+                    <strong>
+                        Aula de como criar novo ambiente, para criar um novo ambiente click no botão projeto novo no menu projeto e em seguida novo.
+                    </strong>
+                </p>
+ 
+                <img src="imagens/combos de identidades.jpg" alt="" class="img">
+
+                <button><a href="https://vimeo.com/473653375" target="_blank" class="link">Assistir</a></button>
+
+                <h2>FUNCIONALIDADES E ACESSÓRIOS</h2>
+                <h3>Orçamento</h3>
+                 <p>
+                    <strong>
+                        Este diferencial proporciona a gestão adequada para obtenção de margem nos seus projetos, saberá antecipadamente o que deverá ser pago aos fornecedores antes mesmo de fechar suas negociações, evitando tomar decisões equivocadas na precificação por m2 ou estimativas catastróficas. 
+                    </strong>
+                    <br> <br>
+                    <strong>
+                        Para acessar o relatório de venda basta ir no Menu Projeto / Orçamento ou aperte o Ctrl L. Neste relatório, após a devida indicação de Mark-Up ou Coeficiente de Revenda você obterá o preço de venda/negociação.
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img30.jpg" alt="" class="img">
+
+                
+                 <h2>Envio de Pedidos</h2>
+                 <p>
+                    <strong>
+                        Realizado o projeto, concluída com sucesso a negociação, será preciso conferir as medidas dos ambientes e enviar o pedido para o parceiro industrial. O sistema Projje conta com uma funcionalidade de envio do pedido, aliado a um servidor dedicado para receber, protocolar e programar sua produção. Tudo isso de forma automatizada, o que proporciona assertividade das informações, rapidez no seu trato e eficiência nas operações de corte, filetação, furação, embalagem e expedição. 
+                    </strong>
+                </p>
+ 
+                 <img src="imagens/img31.jpg" alt="" class="img">
+
+                <p>
+                    <strong>
+                        1. Para enviar o pedido basta acessar o Menu Projeto / Pedido Fábrica, digitar a senha (123 originalmente) e, uma vez que o relatório de custo se abra, clique no botão "Enviar Pedido". Em alguns instantes será apresentado um protocolo com o registro do pedido.
+                        2. Também no Menu Projeto / Histórico de Pedidos você encontrará todos os pedidos enviados pela sua licença.
+                        3. ATENÇÃO - Não realize envio de pedidos com dois ou mais projetos abertos, isso pode gerar conflito no banco de dados incorrendo em possíveis inconformidades.
+                   </strong>
+                </p>
+
+                <h2>Conteúdo do curso produzido por Jotta Moreira</h2>
+
+
+            </div>
         </div>
-        <div class="linha3">
-          <label for="">Apresentação - Vídeo Aulas</label>
-           <div>
-            <select id="select3">
-              <option value="" disabled selected>Selecione a aula</option>
-              <option value="videos/Renderizar.mp4">Aula 11 - Salvar Vistas e Renderizar</option>
-              <option value="videos/Editar Paredes.mp4">Aula 02 - Editar Paredes</option>
-            </select>
-          </div>
-        </div>
-        <div class="linha4">
-          <label for="">Singularidade do Sistema</label>
-           <div>
-            <select id="select4">
-              <option value="" disabled selected>Selecione a aula</option>
-              <option value="combin.html">Combinatividade</option>
-              <option value="videos/Exemplo.mp4">Exemplo Prático</option>
-            </select>
-          </div>
-        </div>
-        <div class="linha5">
-          <label for="">Usabilidade daa Modulações - Video Aulas</label>
-           <div>
-            <select id="select5">
-              <option value="" disabled selected>Selecione a aula</option>
-              <option value="videos/Insercao Modulos.mp4">Inserção dos Módulos</option>
-              <option value="videos/Edicao Medidas.mp4">Edição de Medidas</option>
-              <option value="movim.html">Movimentação dos Módulos</option>
-              <option value="videos/comp Laterais.mp4">Compartilhamento das Laterais</option>
-              <option value="videos/Estruturacao Modulos.mp4">Estruturação dos Módulos</option>
-              <option value="videos/Gavetas Sapateiras.mp4">Inserção de Gavetas e Sapateiras Internas</option>
-              <option value="videos/Avanco Frente.mp4">Avanços das Frentes</option>
-              <option value="videos/Movimentacao Interna.mp4">Movimentação Interna</option>
-            </select>
-          </div>
-        </div>
-        <div class="linha6">
-          <label for="">Funcionalidades Acessórias</label>
-           <div>
-            <select id="select6">
-              <option value="" disabled selected>Selecione a aula</option>
-              <option value="cadastro.html">Cadastros</option>
-              <option value="">Mark-Up</option>
-              <option value="">Relatórios de Custo e Venda</option>
-              <option value="">Leitura dos Relatórios de Orçamento</option>
-              <option value="">Configuração dos Relatórios</option>
-              <option value="">Envio de Pedidos</option>
-            </select>
-          </div>
-        </div>
-      </div>
-  </div>  
-      <script src="script.js"></script>
 </body>
 </html>

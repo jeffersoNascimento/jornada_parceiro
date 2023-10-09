@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +16,7 @@
 
 body {
     background-color: var(--bege);
-    min-height: 100vh; /* Garante que o corpo da página ocupe toda a altura da tela */
+    min-height: 100vh;
 }
 
 h1 {
@@ -55,9 +57,9 @@ h2 {
     background-color: var(--bege);
     border-radius: 4px;
     padding: 10px;
-    max-width: 300px; /* Define a largura da imagem para preencher o cabeçalho */
-    height: auto; /* Mantém a proporção original da imagem */
-    box-shadow: 1px 2px 1px  rgb(95, 125, 34);
+    max-width: 300px;
+    height: auto;
+    box-shadow: 1px 2px 1px rgb(95, 125, 34);
 }
 
 .linhas {
@@ -75,12 +77,11 @@ h2 {
     color: var(--bege);
     display: flex;
     flex-direction: column;
-    border-radius: 4px; 
-    padding: 10px; 
+    border-radius: 4px;
+    padding: 10px;
     box-shadow: 1px 2px 1px rgb(95, 125, 34);
 }
 
-/* Adicione um estilo para ocultar o vídeo por padrão */
 #videoPlayer {
     background-color: var(--green1);
     display: none;
@@ -92,45 +93,67 @@ h2 {
     box-shadow: 1px 2px 1px rgb(95, 125, 34);
 }
 
-/* Estilo para mostrar o vídeo quando uma opção for selecionada */
 #select1:focus + #videoPlayer {
     display: flex;
 }
 
-/* Estilo para o seletor select */
-#select1, #select2, #select3, #select4, #select5, #select6{
+#select1, #select2, #select3, #select4, #select5, #select6 {
     color: var(--green);
-    margin-bottom: 5px; /* Adicione espaço inferior para separar do vídeo */
+    margin-bottom: 5px;
 }
 
-/* Estilo para o wrapper do seletor */
 .select-wrapper {
     margin-right: 20px;
 }
 
-/* Estilo para o wrapper do vídeo */
 .video-wrapper {
     flex-grow: 1;
     display: flex;
     flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
 }
 
-.video-wrapper {
-    position: absolute; /* Define a posição absoluta */
-    top: 0; /* Alinha o topo do vídeo com o topo da div pai */
-    left: 50%; /* Move o vídeo para a direita em relação à div pai */
-    transform: translateX(-50%); /* Centraliza horizontalmente o vídeo */
-    width: 45%; /* Define a largura da div que contém o <video> */
-}
-
+/* Media queries para tornar o CSS responsivo */
 
 @media screen and (max-width: 768px) {
-    /* Estilos para telas menores (celulares) */
-    .video-wrapper {
-        flex-direction: column;
+    .header {
+        padding: 30px;
+    }
+
+    .header img {
+        max-width: 200px;
+    }
+
+    .img {
+        margin-left: 20px;
+        width: 100%;
+        height: auto;
     }
 
     #videoPlayer {
+        width: 100%;
+        height: auto;
         margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .linha1, .linha2, .linha3, .linha4, .linha5, .linha6 {
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1, h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-left: 20px;
     }
 }
