@@ -37,10 +37,10 @@ h2 {
 }
 
 .img {
+    margin-top: 10px;
     margin-left: 100px;
     width: 800px;
     height: 500px;
-    box-shadow: 2px 2px 2px rgb(95, 125, 34);
     border-radius: 5px;
     margin-bottom: 50px;
 }
